@@ -51,5 +51,27 @@ export function createToDo(title) {
         priority = Priorities[newPriority];
     }
 
-    return {getTitle, setTitle, getDescription, setDescription, getDueDate, setDueDate, getPriority, setPriority};
+    // Project
+    let project = null;
+
+    const getProject = function () {
+        return project;
+    }
+
+    const setProject = function (newProject) {
+        project = newProject;
+    }
+
+    return {
+        getTitle,
+        setTitle,
+        getDescription,
+        setDescription,
+        getDueDate,
+        setDueDate,
+        getPriority,
+        setPriority,
+        getProject,
+        setProject
+    };
 }
