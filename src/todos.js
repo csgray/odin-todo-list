@@ -5,7 +5,7 @@ export const Priorities = Object.freeze({
     None: "None",
 })
 
-export function createToDo(title) {
+export function createTodo(title) {
     // Title
     const getTitle = function () {
         return title;

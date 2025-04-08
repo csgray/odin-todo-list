@@ -19,7 +19,7 @@ export function createProject(title) {
         description = newDescription;
     }
 
-    // ToDos
+    // Todos
     const todos = [];
 
     const getTodos = function () {
