@@ -34,5 +34,13 @@ export function createProject(title) {
         todos.splice(todos.indexOf(todo), 1)
     }
 
-    return {getTitle, setTitle, getDescription, setDescription, getTodos, addTodo, deleteTodo};
+    // Custom serialization since all variables are private
+    const toJSON = function () {
+        return {
+            title: getTitle(),
+            description: getDescription(),
+        }
+    }
+
+    return {getTitle, setTitle, getDescription, setDescription, getTodos, addTodo, deleteTodo, toJSON};
 }
