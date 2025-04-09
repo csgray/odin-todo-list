@@ -15,8 +15,7 @@ export function getFromStorage() {
         allTodos.setDescription("Default project that holds all todos")
         projects.push(allTodos);
     } else {
-        for (let item of projectsJson) {
-            item = JSON.parse(item);
+        for (const item of projectsJson) {
             const project = createProject(item.title);
             project.setDescription(item.description);
             projects.push(project);
